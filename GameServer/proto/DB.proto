@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+option csharp_namespace = "rpcClient";
+
+package DB;
+
+// The greeting service definition.
+service DB {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply);
+  rpc CreateUser(CreateUserRequest) returns (CreateUserReply);
+  rpc DeleteUser(DeleteUserRequest) returns (DeleteUserReply);
+  rpc UpdateUser(UpdateUserRequest) returns (UpdateUserReply);
+  rpc GetUser(GetUserRequest) returns (GetUserReply);
+}
+
+// The request message containing the user's name.
+message CreateUserRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message CreateUserReply {
+  string message = 1;
+}
+
+message DeleteUserRequest {
+  string name = 1;
+}
+
+message DeleteUserReply {
+  string message = 1;
+}
+
+message UpdateUserRequest {
+  string name = 1;
+  string new_name = 2;
+}	
+
+message UpdateUserReply {
+  string message = 1;
+}	
+
+message GetUserRequest {
+  string name = 1;
+}	
+
+message GetUserReply {
+  string message = 1;
+}

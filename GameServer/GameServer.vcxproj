@@ -142,6 +142,7 @@
     <ClCompile Include="Timer\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="proto\DB.proto" />
     <None Include="proto\greet.proto" />
   </ItemGroup>
   <ItemGroup>

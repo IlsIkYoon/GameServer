@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="proto\greet.proto" />
+    <None Include="proto\DB.proto" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="proto\greet.grpc.pb.h">
