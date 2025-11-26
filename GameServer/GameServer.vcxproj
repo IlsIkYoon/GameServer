@@ -126,19 +126,40 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Buffer\RingBuffer.cpp" />
+    <ClCompile Include="GameProc\GameProc.cpp" />
+    <ClCompile Include="GameServer.cpp" />
+    <ClCompile Include="Logger\Log.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Message\Message.cpp" />
+    <ClCompile Include="Network\GameNetwork.cpp" />
+    <ClCompile Include="Network\NetworkInit.cpp" />
     <ClCompile Include="proto\greet.grpc.pb.cc" />
     <ClCompile Include="proto\greet.pb.cc" />
+    <ClCompile Include="Sector\Sector.cpp" />
     <ClCompile Include="Service\GreetService.cpp" />
+    <ClCompile Include="Session\Session.cpp" />
+    <ClCompile Include="Timer\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="proto\greet.proto" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Buffer\RingBuffer.h" />
+    <ClInclude Include="GameProc\GameProc.h" />
+    <ClInclude Include="GameServer.h" />
+    <ClInclude Include="Logger\Log.h" />
+    <ClInclude Include="Message\Message.h" />
+    <ClInclude Include="Message\PacketDefine.h" />
+    <ClInclude Include="Network\GameNetwork.h" />
+    <ClInclude Include="Network\NetworkInit.h" />
     <ClInclude Include="proto\greet.grpc.pb.h" />
     <ClInclude Include="proto\greet.pb.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Sector\Sector.h" />
     <ClInclude Include="Service\GreetService.h" />
+    <ClInclude Include="Session\Session.h" />
+    <ClInclude Include="Timer\Timer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
