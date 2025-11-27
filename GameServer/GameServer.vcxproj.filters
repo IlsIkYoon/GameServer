@@ -57,6 +57,15 @@
     <ClCompile Include="Timer\Timer.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Service\DBClient.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="proto\DB.grpc.pb.cc">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="proto\DB.pb.cc">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="proto\greet.proto" />
@@ -106,6 +115,15 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Timer\Timer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Service\DBClient.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="proto\DB.grpc.pb.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="proto\DB.pb.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

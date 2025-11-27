@@ -7,7 +7,6 @@ package DB;
 // The greeting service definition.
 service DB {
   // Sends a greeting
-  rpc SayHello (HelloRequest) returns (HelloReply);
   rpc CreateUser(CreateUserRequest) returns (CreateUserReply);
   rpc DeleteUser(DeleteUserRequest) returns (DeleteUserReply);
   rpc UpdateUser(UpdateUserRequest) returns (UpdateUserReply);
@@ -16,7 +15,7 @@ service DB {
 
 // The request message containing the user's name.
 message CreateUserRequest {
-  string name = 1;
+	uint64 ID = 1;
 }
 
 // The response message containing the greetings.
@@ -25,26 +24,31 @@ message CreateUserReply {
 }
 
 message DeleteUserRequest {
-  string name = 1;
+  uint64 ID = 1;
 }
 
 message DeleteUserReply {
-  string message = 1;
+  uint64 ID = 1;
 }
 
 message UpdateUserRequest {
-  string name = 1;
-  string new_name = 2;
+	uint64 ID = 1;
+	uint32 level = 2;
+	uint32 hp = 3;
 }	
 
 message UpdateUserReply {
-  string message = 1;
+	uint64 ID = 1;
+	uint32 level = 2;
+	uint32 hp = 3;
 }	
 
 message GetUserRequest {
-  string name = 1;
+  uint64 ID = 1;
 }	
 
 message GetUserReply {
-  string message = 1;
+  uint64 ID = 1;
+  uint32 level = 2;
+  uint32 hp  = 3;
 }

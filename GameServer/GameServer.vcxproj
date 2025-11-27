@@ -134,9 +134,12 @@
     <ClCompile Include="Message\Message.cpp" />
     <ClCompile Include="Network\GameNetwork.cpp" />
     <ClCompile Include="Network\NetworkInit.cpp" />
+    <ClCompile Include="proto\DB.grpc.pb.cc" />
+    <ClCompile Include="proto\DB.pb.cc" />
     <ClCompile Include="proto\greet.grpc.pb.cc" />
     <ClCompile Include="proto\greet.pb.cc" />
     <ClCompile Include="Sector\Sector.cpp" />
+    <ClCompile Include="Service\DBClient.cpp" />
     <ClCompile Include="Service\GreetService.cpp" />
     <ClCompile Include="Session\Session.cpp" />
     <ClCompile Include="Timer\Timer.cpp" />
@@ -154,10 +157,13 @@
     <ClInclude Include="Message\PacketDefine.h" />
     <ClInclude Include="Network\GameNetwork.h" />
     <ClInclude Include="Network\NetworkInit.h" />
+    <ClInclude Include="proto\DB.grpc.pb.h" />
+    <ClInclude Include="proto\DB.pb.h" />
     <ClInclude Include="proto\greet.grpc.pb.h" />
     <ClInclude Include="proto\greet.pb.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Sector\Sector.h" />
+    <ClInclude Include="Service\DBClient.h" />
     <ClInclude Include="Service\GreetService.h" />
     <ClInclude Include="Session\Session.h" />
     <ClInclude Include="Timer\Timer.h" />
