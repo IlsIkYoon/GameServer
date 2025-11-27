@@ -1,5 +1,6 @@
 #include "Log.h"
 #include "GameServer.h"
+#include "Timer/Timer.h"
 
 
 extern DWORD playerCount;
@@ -36,11 +37,11 @@ unsigned int __stdcall LogThread(void*)
 	DWORD eventRet;
 	while (1)
 	{
-		if (sec != timeGetTime() / 1000)
+		if (sec != getCurrentTime() / 1000)
 		{
 			//1초에 한번 할 일 
 			PrintLog();
-			sec = timeGetTime() / 1000;
+			sec = getCurrentTime() / 1000;
 
 			if (frame < FrameError)
 			{
@@ -57,7 +58,7 @@ unsigned int __stdcall LogThread(void*)
 
 		}
 
-		eventRet = WaitForSingleObject(g_ExitEvent, 1000 - (timeGetTime() % 1000));
+		eventRet = WaitForSingleObject(g_ExitEvent, 1000 - (getCurrentTime() % 1000));
 
 		if (eventRet != WAIT_TIMEOUT) break;
 

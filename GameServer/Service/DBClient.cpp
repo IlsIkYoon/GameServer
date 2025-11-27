@@ -1,5 +1,5 @@
 #include "DBClient.h"
-#include <resource.h>
+#include "resource.h"
 
 DBClient::DBClient(const std::string& server_address)
 {

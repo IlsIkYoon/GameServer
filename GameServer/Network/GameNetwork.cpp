@@ -1,6 +1,7 @@
 #include "GameNetwork.h"
 #include "Session/Session.h"
 #include "Sector/Sector.h"
+#include "Timer/Timer.h"
 #include "Logger/Log.h"
 
 
@@ -65,7 +66,7 @@ void GameNetwork()
 	{
 		if (FD_ISSET(session->_socket, &readset[iDex / 64]))
 		{
-			session->_timeout = timeGetTime();
+			session->_timeout = getCurrentTime();
 
 			recv_retval = recv(session->_socket, session->_recvQ.GetRear(),
 				session->_recvQ.GetDirectEnqueSize(), NULL);

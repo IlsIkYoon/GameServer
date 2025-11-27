@@ -4,6 +4,7 @@
 #include "resource.h"
 #include "Buffer/RingBuffer.h"
 #include "Message/PacketDefine.h"
+#include "Timer/Timer.h"
 #include <map>
 
 extern DWORD playerCount;
@@ -85,7 +86,7 @@ public:
 		_socket = 0;
 
 
-		_timeout = timeGetTime();
+		_timeout = getCurrentTime();
 		_delete = false;
 	}
 

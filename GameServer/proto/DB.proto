@@ -20,7 +20,7 @@ message CreateUserRequest {
 
 // The response message containing the greetings.
 message CreateUserReply {
-  string message = 1;
+  uint64 message = 1;
 }
 
 message DeleteUserRequest {

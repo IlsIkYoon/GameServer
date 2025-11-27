@@ -9,3 +9,7 @@
 void setupTimer() {
     timeBeginPeriod(1);
 }
+unsigned int getCurrentTime()
+{
+    return timeGetTime();
+}

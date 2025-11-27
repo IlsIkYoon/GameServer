@@ -3,6 +3,7 @@
 #include "Sector/Sector.h"
 #include "Message/Message.h"
 #include "Logger/Log.h"
+#include "Timer/Timer.h"
 #include <format>
 
 //전역변수
@@ -409,7 +410,7 @@ void FlushDeleteArr()
 
 void TimeOutCheck()
 {
-	DWORD deadLine = timeGetTime() - dfNETWORK_PACKET_RECV_TIMEOUT;
+	DWORD deadLine = getCurrentTime() - dfNETWORK_PACKET_RECV_TIMEOUT;
 
 
 	for (auto session : SessionArr)

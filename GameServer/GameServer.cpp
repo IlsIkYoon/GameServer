@@ -3,6 +3,7 @@
 #include "Network/NetworkInit.h"
 #include "Logger/Log.h"
 #include "Network/GameNetwork.h"
+#include "Timer/Timer.h"
 #include <process.h>
 
 DWORD frame = 0;
@@ -17,7 +18,7 @@ bool GameServer() {
 
 	NetworkInit();
 
-	DWORD startTime = timeGetTime();
+	DWORD startTime = getCurrentTime();
 
 	DWORD dwUpdateTick = startTime - FrameSec;
 	sec = startTime / 1000;
@@ -32,7 +33,7 @@ bool GameServer() {
 
 	while (1)
 	{
-		DWORD currentTime = timeGetTime();
+		DWORD currentTime = getCurrentTime();
 		DWORD deltaTime = currentTime - g_prevFrameTime;
 		DWORD deltaCount = deltaTime / FrameSec;
 		g_fixedDeltaTime = deltaCount * FrameSec;
@@ -44,7 +45,7 @@ bool GameServer() {
 		UpdateGameLogic(g_fixedDeltaTime);
 
 
-		DWORD logicTime = timeGetTime() - currentTime;
+		DWORD logicTime = getCurrentTime() - currentTime;
 
 		if (logicTime < FrameSec)
 		{
