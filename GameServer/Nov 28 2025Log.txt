@@ -7,3 +7,48 @@ Sync Message Count : 0
 TimeOut Count : 0
 Message Error Count : Disabled
 --------------------------------
+
+--------------------------------
+Error Count : 0
+PlayerCount : 0
+frame : 14
+Sync Message Count : 0
+TimeOut Count : 0
+Message Error Count : Disabled
+--------------------------------
+
+--------------------------------
+Error Count : 0
+PlayerCount : 0
+frame : 5
+Sync Message Count : 0
+TimeOut Count : 0
+Message Error Count : Disabled
+--------------------------------
+
+--------------------------------
+Error Count : 0
+PlayerCount : 0
+frame : 16
+Sync Message Count : 0
+TimeOut Count : 0
+Message Error Count : Disabled
+--------------------------------
+
+--------------------------------
+Error Count : 0
+PlayerCount : 0
+frame : 13
+Sync Message Count : 0
+TimeOut Count : 0
+Message Error Count : Disabled
+--------------------------------
+
+--------------------------------
+Error Count : 0
+PlayerCount : 0
+frame : 19
+Sync Message Count : 0
+TimeOut Count : 0
+Message Error Count : Disabled
+--------------------------------
