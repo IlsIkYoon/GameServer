@@ -127,6 +127,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Buffer\RingBuffer.cpp" />
+    <ClCompile Include="DBManager\DBManager.cpp" />
     <ClCompile Include="GameProc\GameProc.cpp" />
     <ClCompile Include="GameServer.cpp" />
     <ClCompile Include="Logger\Log.cpp" />
@@ -134,6 +135,7 @@
     <ClCompile Include="Message\Message.cpp" />
     <ClCompile Include="Network\GameNetwork.cpp" />
     <ClCompile Include="Network\NetworkInit.cpp" />
+    <ClCompile Include="Parser\TextParser.cpp" />
     <ClCompile Include="proto\DB.grpc.pb.cc" />
     <ClCompile Include="proto\DB.pb.cc" />
     <ClCompile Include="proto\greet.grpc.pb.cc" />
@@ -150,6 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Buffer\RingBuffer.h" />
+    <ClInclude Include="DBManager\DBManager.h" />
     <ClInclude Include="GameProc\GameProc.h" />
     <ClInclude Include="GameServer.h" />
     <ClInclude Include="Logger\Log.h" />
@@ -157,6 +160,7 @@
     <ClInclude Include="Message\PacketDefine.h" />
     <ClInclude Include="Network\GameNetwork.h" />
     <ClInclude Include="Network\NetworkInit.h" />
+    <ClInclude Include="Parser\TextParser.h" />
     <ClInclude Include="proto\DB.grpc.pb.h" />
     <ClInclude Include="proto\DB.pb.h" />
     <ClInclude Include="proto\greet.grpc.pb.h" />
