@@ -5,8 +5,6 @@
 
 int main()
 {
-	CDBManager test;
-	test.RegistDBService("DBService.config");
 
 	GameServer();
 

@@ -37,3 +37,32 @@ void CDBManager::Start()
 
 
 }
+
+int CDBManager::GetDBServiceForId(unsigned long long id)
+{
+	
+	return id % DBServiceCount;
+}
+
+
+bool CDBManager::CreateUser(uint64_t id)
+{
+	int myDBService = GetDBServiceForId(id);
+	return DBClientArr[myDBService]->CreateUser(id);
+}
+bool CDBManager::DeleteUser(uint64_t id)
+{
+	int myDBService = GetDBServiceForId(id);
+	return DBClientArr[myDBService]->DeleteUser(id);
+	
+}
+bool CDBManager::UpdateUser(uint64_t id, uint32_t level, uint32_t hp)
+{
+	int myDBService = GetDBServiceForId(id);
+	return DBClientArr[myDBService]->UpdateUser(id, level, hp);
+}
+bool CDBManager::GetUser(uint64_t id, uint32_t& level, uint32_t& hp)
+{
+	int myDBService = GetDBServiceForId(id);
+	return DBClientArr[myDBService]->UpdateUser(id, level, hp);
+}

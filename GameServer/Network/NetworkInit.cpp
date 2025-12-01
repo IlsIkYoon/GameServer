@@ -1,4 +1,4 @@
-
+#include "DBManager/DBManager.h"
 #include "NetworkInit.h"
 #include "Timer/Timer.h"
 //#include "DBConnector/DBConnector.h"
@@ -10,6 +10,14 @@ extern CRITICAL_SECTION g_lock;
 
 bool NetworkInit()
 {
+	CDBManager test;
+	test.RegistDBService("DBService.config");
+	test.Start();
+	for (int i = 0; i < 100; i++)
+	{
+		test.CreateUser(i);
+	}
+
 
 
 	WSADATA wsa;
