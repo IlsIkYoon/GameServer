@@ -1,13 +1,13 @@
 #include "DBClient.h"
 #include "resource.h"
 
-DBClient::DBClient(const std::string& server_address)
+CDBClient::CDBClient(const std::string& server_address)
 {
     stub_ = DB::DB::NewStub(grpc::CreateChannel(
         server_address, grpc::InsecureChannelCredentials()));
 }
 
-bool DBClient::CreateUser(uint64_t id)
+bool CDBClient::CreateUser(uint64_t id)
 {
     DB::CreateUserRequest request;
     request.set_id(id);
@@ -23,7 +23,7 @@ bool DBClient::CreateUser(uint64_t id)
     return false;
 }
 
-bool DBClient::DeleteUser(uint64_t id)
+bool CDBClient::DeleteUser(uint64_t id)
 {
     DB::DeleteUserRequest request;
     request.set_id(id);
@@ -39,7 +39,7 @@ bool DBClient::DeleteUser(uint64_t id)
     return false;
 }
 
-bool DBClient::UpdateUser(uint64_t id, uint32_t level, uint32_t hp)
+bool CDBClient::UpdateUser(uint64_t id, uint32_t level, uint32_t hp)
 {
     DB::UpdateUserRequest request;
     request.set_id(id);
@@ -60,7 +60,7 @@ bool DBClient::UpdateUser(uint64_t id, uint32_t level, uint32_t hp)
     return false;
 }
 
-bool DBClient::GetUser(uint64_t id, uint32_t& level, uint32_t& hp)
+bool CDBClient::GetUser(uint64_t id, uint32_t& level, uint32_t& hp)
 {
     DB::GetUserRequest request;
     request.set_id(id);

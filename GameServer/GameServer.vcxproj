@@ -119,6 +119,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>D:\VSProjects\repos\GameServer\GameServer;D:\VSProjects\repos\GameServer\GameServer\proto;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -138,17 +139,14 @@
     <ClCompile Include="Parser\TextParser.cpp" />
     <ClCompile Include="proto\DB.grpc.pb.cc" />
     <ClCompile Include="proto\DB.pb.cc" />
-    <ClCompile Include="proto\greet.grpc.pb.cc" />
-    <ClCompile Include="proto\greet.pb.cc" />
     <ClCompile Include="Sector\Sector.cpp" />
     <ClCompile Include="Service\DBClient.cpp" />
-    <ClCompile Include="Service\GreetService.cpp" />
     <ClCompile Include="Session\Session.cpp" />
     <ClCompile Include="Timer\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="DBService.config" />
     <None Include="proto\DB.proto" />
-    <None Include="proto\greet.proto" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Buffer\RingBuffer.h" />

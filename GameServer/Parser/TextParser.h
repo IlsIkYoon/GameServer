@@ -135,7 +135,7 @@ public:
 
 		}
 	}
-	bool SearchData(const char* targetKey, std::string targetString) {
+	bool SearchData(const char* targetKey, std::string& targetString) {
 		//정수일 경우를 상정, char일 경우는 특수화 진행
 		_dataPos = _dataBuf; // 처음부터 찾기
 
@@ -183,14 +183,18 @@ public:
 						delete[] dataKey;
 						return false;
 					}
-					else if (*_dataPos >= 0x21 && *_dataPos <= 0x7E) { // 첫 문자가 숫자가 아니라면 문자열로 간주
-						int i = 0;
-						while (*_dataPos >= 0x21 && *_dataPos <= 0x7E) {
+					else if (*_dataPos == '"') { // 첫 문자가 숫자가 아니라면 문자열로 간주
+						_dataPos++;
+						while (*_dataPos != '"') {
 							targetString += *_dataPos; //string에 계속 추가해줌
 							_dataPos++;
 						}
 						delete[] dataKey;
 						return true;
+					}
+					else {
+						delete[] dataKey;
+						return false;
 					}
 
 				}

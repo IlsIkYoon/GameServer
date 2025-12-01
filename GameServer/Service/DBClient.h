@@ -4,11 +4,12 @@
 #include "proto/DB.grpc.pb.h"
 #include "proto/DB.pb.h"
 
-class DBClient
+class CDBClient
 {
 public:
     // 생성자: 서버 주소 지정
-    DBClient(const std::string& server_address);
+    CDBClient(const std::string& server_address);
+    HANDLE hDBThread;
 
     // RPC 함수들
     bool CreateUser(uint64_t id);

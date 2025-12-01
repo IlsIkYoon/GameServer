@@ -1,5 +1,4 @@
 
-#include "Service/GreetService.h"
 #include "NetworkInit.h"
 #include "Timer/Timer.h"
 //#include "DBConnector/DBConnector.h"
@@ -11,21 +10,6 @@ extern CRITICAL_SECTION g_lock;
 
 bool NetworkInit()
 {
-	//CDBConnector dbConnector; // DB 커넥터 초기화	
-	
-		// 서버 주소: localhost, 포트 50051 (서버 설정에 맞게 변경)
-	GreeterTestClient client(grpc::CreateChannel(
-		"localhost:5188", grpc::InsecureChannelCredentials()));
-
-	std::string user = "World";
-	std::string reply = client.SayHello(user);
-	std::cout << "Greeter received: " << reply << std::endl;
-
-	Sleep(10000);
-
-	//----------------------------------------------------
-	// gRPC 테스트
-	//----------------------------------------------------
 
 
 	WSADATA wsa;
